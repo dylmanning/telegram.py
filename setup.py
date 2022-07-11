@@ -1,8 +1,11 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
     name="telegram",
     version="1.0",
-    packages=find_packages(where="./telegram"),
+    packages=["telegram"],
+    package_dir={
+        "telegram": "./telegram",
+    },
 )
