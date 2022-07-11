@@ -1,5 +1,6 @@
 from setuptools import setup
 
+requirements = [r.strip() for r in open("requirements.txt").readlines()]
 
 setup(
     name="telegram",
@@ -8,4 +9,5 @@ setup(
     package_dir={
         "telegram": "./telegram",
     },
+    install_requires=requirements,
 )
